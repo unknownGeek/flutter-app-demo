@@ -4,13 +4,14 @@ import 'ChatScreen.dart';
 
 class HomePage extends StatelessWidget {
 
+  final AppBar appBar;
+
+  HomePage({Key key, @required this.appBar}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-        title: new Text("Fun Chat"),
-        centerTitle: true
-      ),
+      appBar: appBar,
       body: new ChatScreen()
     );
   }
